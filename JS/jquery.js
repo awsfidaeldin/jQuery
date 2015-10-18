@@ -80,7 +80,7 @@ $('button').on('click',validateEmail);
 function WritePhone()
 	{
 		var phone = $('#phone').val();
-		// 3034763506
+		
 		if ( phone === '' )
 		{
 			//add red border
@@ -95,7 +95,6 @@ function WritePhone()
 			var firstDigit = "-" + phone.substring(3,6) + "-";
 			var lastDigit = phone.substring(6,10);
 			$("#phone").val(areaCode + firstDigit + lastDigit);
-			// $("#phone").val('Phone # is: ' + phone);
 		}
 	}
 
