@@ -1,9 +1,9 @@
 
-
+//Function to validate Name and Address.
 function validateNameAddress()
 	{
 		var name = $('#name').val();
-		if ( name === '' )
+		if ( name === "" )
 		{
 
 			//add red border
@@ -20,7 +20,7 @@ function validateNameAddress()
 
 
 		var address = $('#address').val();
-		if ( address === '' )
+		if ( address === "" )
 		{
 
 			//add red border
@@ -40,14 +40,14 @@ $('button').on('click',validateNameAddress);
 
 
 
-
+//Function to validate Phone Number.
 function validatePhone()
 	{
 		var phone = $('#phone').val();
 		
 		if(phone.length < 10) {
 			$('#phone').addClass('invalid');
-		} else if(arr.length > 10) {
+		} else if(phone.length > 10) {
 			$('#phone').addClass('invalid');
 		} else {
 			$('#phone').addClass('valid');
@@ -58,7 +58,7 @@ $('#phone').on('keyup',validatePhone);
 
 
 
-
+//Function to validate Email.
 function validateEmail()
 	{
 		var email = $('#email').val();
@@ -77,6 +77,7 @@ $('button').on('click',validateEmail);
 
 
 
+//Function to write phone number.
 function WritePhone()
 	{
 		var phone = $('#phone').val();
@@ -87,7 +88,7 @@ function WritePhone()
 			$('#phone').addClass('invalid');
 			$('#phone').removeClass('valid');
 		}
-		else
+		else if ( phone.length === 10 )
 		{
 			$('#phone').addClass('valid');
 			$('#phone').removeClass('invalid');
